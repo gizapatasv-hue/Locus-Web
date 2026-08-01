@@ -1,0 +1,232 @@
+/* =====================================================
+   LOCUS
+   animations.css
+===================================================== */
+
+
+/* ======================================
+   HERO
+====================================== */
+
+.hero-tag{
+
+    animation:fadeDown .8s ease forwards;
+
+}
+
+.hero h1{
+
+    opacity:0;
+
+    animation:fadeUp .9s ease forwards;
+
+    animation-delay:.2s;
+
+}
+
+.hero p{
+
+    opacity:0;
+
+    animation:fadeUp .9s ease forwards;
+
+    animation-delay:.45s;
+
+}
+
+.hero-buttons{
+
+    opacity:0;
+
+    animation:fadeUp .9s ease forwards;
+
+    animation-delay:.7s;
+
+}
+
+
+/* ======================================
+   FLECHA
+====================================== */
+
+.scroll-indicator{
+
+    animation:bounce 2.4s infinite;
+
+}
+
+
+/* ======================================
+   KEYFRAMES
+====================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-25px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+        transform:scale(.92);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+
+@keyframes bounce{
+
+    0%{
+
+        transform:translateX(-50%) translateY(0);
+
+    }
+
+    25%{
+
+        transform:translateX(-50%) translateY(8px);
+
+    }
+
+    50%{
+
+        transform:translateX(-50%) translateY(0);
+
+    }
+
+    75%{
+
+        transform:translateX(-50%) translateY(8px);
+
+    }
+
+    100%{
+
+        transform:translateX(-50%) translateY(0);
+
+    }
+
+}
+
+
+/* ======================================
+   BOTONES
+====================================== */
+
+.btn{
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease,
+        color .3s ease;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+
+/* ======================================
+   LOGO
+====================================== */
+
+.logo img{
+
+    transition:transform .35s ease;
+
+}
+
+.logo:hover img{
+
+    transform:scale(1.04);
+
+}
+
+
+/* ======================================
+   LINKS
+====================================== */
+
+#navbar a{
+
+    transition:
+        color .3s ease;
+
+}
+
+
+/* ======================================
+   HERO IMAGE
+====================================== */
+
+.hero{
+
+    animation:fadeIn 1.5s ease;
+
+}

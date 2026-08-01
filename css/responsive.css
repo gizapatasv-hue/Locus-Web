@@ -1,0 +1,260 @@
+/* =====================================================
+   LOCUS
+   responsive.css - Adapta la interfaz a múltiples dispositivos
+===================================================== */
+
+
+/* ==========================================
+   TABLET (<= 992px)
+========================================== */
+@media (max-width: 992px) {
+
+    .container {
+        width: min(94%, var(--container-width, 1200px));
+    }
+
+    /* --- NAVEGACIÓN Y MENÚ DESPLEGABLE --- */
+    #navbar {
+        position: fixed;
+        top: var(--header-height, 80px);
+        right: 0;
+        width: 300px;
+        height: calc(100dvh - var(--header-height, 80px));
+        background: var(--bg-menu, #ffffff);
+        
+        /* Animación suave y GPU acelerada */
+        transform: translateX(100%);
+        will-change: transform;
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        
+        box-shadow: var(--shadow-lg, -4px 0 20px rgba(0,0,0,0.1));
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 3rem;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Estado cuando el menú está abierto */
+    #navbar.active {
+        transform: translateX(0);
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        text-align: center;
+        padding-inline: 1.5rem;
+    }
+
+    #navbar a {
+        color: var(--text-main, #333333);
+        font-size: 1.1rem;
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    /* Corregido a flex para mantener el diseño centrado de las barras */
+    .menu-toggle {
+        display: flex; 
+    }
+
+    /* --- HERO EN TABLETS --- */
+    .hero {
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-inline: auto;
+        max-width: 700px;
+    }
+
+    .hero p {
+        margin-inline: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+
+/* ==========================================
+   MOBILE (<= 768px)
+========================================== */
+@media (max-width: 768px) {
+
+    #header {
+        height: 72px;
+    }
+
+    .logo img {
+        height: 46px;
+    }
+
+    .hero {
+        min-height: 100dvh; /* dvh previene saltos con la barra de navegación del navegador */
+        padding: 0 1.5rem;
+    }
+
+    .hero-tag {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.2rem, 8vw, 2.8rem);
+        line-height: 1.15;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE (<= 480px)
+========================================== */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 2.15rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .hero-tag {
+        padding: 0.45rem 0.8rem;
+    }
+
+    /* Ocupa todo el ancho en pantallas muy pequeñas */
+    #navbar {
+        width: 100%;
+    }
+
+    .btn {
+        height: 50px;
+        font-size: 0.95rem;
+    }
+}
+
+/* ==========================================
+   Sprint 2
+========================================== */
+
+@media (max-width:992px){
+
+    .about-grid{
+
+        grid-template-columns:1fr;
+
+        gap:3rem;
+
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .timeline{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .about,
+    .services,
+    .methodology{
+
+        padding:5rem 0;
+
+    }
+
+    .timeline{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .section-header{
+
+        margin-bottom:3rem;
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    .exploration,
+    .exploration.reverse{
+
+        grid-template-columns:1fr;
+
+        gap:2rem;
+
+    }
+
+    .exploration.reverse .exploration-image,
+    .exploration.reverse .exploration-content{
+
+        order:initial;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .team-member{
+
+        grid-template-columns:1fr;
+
+        gap:1.5rem;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+.footer-content{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.contact-box h2{
+
+font-size:2.2rem;
+
+}
+
+}

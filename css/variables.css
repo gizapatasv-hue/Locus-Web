@@ -1,0 +1,166 @@
+/* =====================================================
+   LOCUS
+   Laboratorio de Territorio, Ciudad y Ambiente
+   Variables Globales
+===================================================== */
+
+:root{
+
+    /* ======================================
+       PALETA PRINCIPAL
+    ====================================== */
+
+    --color-primary: #6F7B59;
+    --color-primary-dark: #566246;
+    --color-primary-light: #A6B38C;
+
+    --color-secondary: #2E7B90;
+    --color-secondary-dark: #225D6D;
+    --color-secondary-light: #73B5C7;
+
+    --color-accent: #C7A76C;
+
+    /* ======================================
+       ESCALA DE GRISES
+    ====================================== */
+
+    --color-black: #1D1D1D;
+
+    --color-gray-900: #2F3437;
+    --color-gray-800: #454B4F;
+    --color-gray-700: #60676C;
+    --color-gray-600: #7B8388;
+    --color-gray-500: #A2A9AD;
+    --color-gray-400: #C7CCCF;
+    --color-gray-300: #DCE0E2;
+    --color-gray-200: #ECEEEF;
+    --color-gray-100: #F5F6F7;
+
+    --color-white: #FFFFFF;
+
+    /* ======================================
+       FONDOS
+    ====================================== */
+
+    --bg-main: #F8F8F5;
+    --bg-light: #FFFFFF;
+    --bg-dark: #202529;
+
+    --hero-overlay: rgba(18,26,31,.58);
+
+    /* ======================================
+       TEXTO
+    ====================================== */
+
+    --text-main: #2F3437;
+    --text-light: #FFFFFF;
+    --text-muted: #6D7478;
+
+    /* ======================================
+       TIPOGRAFÍA
+    ====================================== */
+
+    --font-main: "Manrope", sans-serif;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+
+    /* ======================================
+       TAMAÑOS
+    ====================================== */
+
+    --fs-xs: .75rem;
+    --fs-sm: .875rem;
+    --fs-base: 1rem;
+    --fs-lg: 1.125rem;
+    --fs-xl: 1.35rem;
+    --fs-2xl: 2rem;
+    --fs-3xl: 2.8rem;
+    --fs-4xl: 3.8rem;
+    --fs-5xl: 5rem;
+
+    /* ======================================
+       ALTURAS DE LÍNEA
+    ====================================== */
+
+    --lh-tight: 1.1;
+    --lh-normal: 1.5;
+    --lh-relaxed: 1.8;
+
+    /* ======================================
+       CONTENEDORES
+    ====================================== */
+
+    --container-width: 1280px;
+    --container-narrow: 980px;
+
+    /* ======================================
+       ESPACIADO
+    ====================================== */
+
+    --space-xxs: .25rem;
+    --space-xs: .5rem;
+    --space-sm: .75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    --space-4xl: 6rem;
+    --space-5xl: 8rem;
+
+    /* ======================================
+       BORDES
+    ====================================== */
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-pill: 999px;
+
+    /* ======================================
+       SOMBRAS
+    ====================================== */
+
+    --shadow-sm: 0 3px 10px rgba(0,0,0,.06);
+
+    --shadow-md: 0 8px 24px rgba(0,0,0,.10);
+
+    --shadow-lg: 0 20px 50px rgba(0,0,0,.14);
+
+    /* ======================================
+       HEADER
+    ====================================== */
+
+    --header-height: 82px;
+
+    /* ======================================
+       BOTONES
+    ====================================== */
+
+    --button-height: 52px;
+
+    /* ======================================
+       TRANSICIONES
+    ====================================== */
+
+    --transition-fast: .2s ease;
+
+    --transition-normal: .35s ease;
+
+    --transition-slow: .6s ease;
+
+    /* ======================================
+       Z-INDEX
+    ====================================== */
+
+    --z-menu: 1000;
+    --z-overlay: 500;
+    --z-modal: 5000;
+
+}
