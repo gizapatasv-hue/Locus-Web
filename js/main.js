@@ -36,34 +36,58 @@ document.addEventListener("DOMContentLoaded", () => {
        SCROLL SUAVE
     ====================================== */
 
-    navLinks.forEach(link => {
+navLinks.forEach(link => {
 
-        link.addEventListener("click", function(e){
+    link.addEventListener("click", function(e){
 
-            const target = this.getAttribute("href");
+        const target = this.getAttribute("href");
 
-            if(target.startsWith("#")){
+        if(target.startsWith("#")){
 
-                e.preventDefault();
+            e.preventDefault();
 
-                const section = document.querySelector(target);
+            navbar.classList.remove("active");
+            menuToggle.classList.remove("active");
 
-                if(section){
+            menuToggle.setAttribute("aria-expanded","false");
 
-                    section.scrollIntoView({
+            document.body.classList.remove("menu-open");
 
-                        behavior:"smooth",
-                        block:"start"
+            const section = document.querySelector(target);
 
-                    });
+            if(section){
 
-                }
+                section.scrollIntoView({
+
+                    behavior:"smooth",
+                    block:"start"
+
+                });
 
             }
 
-        });
+        }
 
     });
+
+});
+
+/* ======================================
+   MENÚ HAMBURGUESA
+====================================== */
+
+menuToggle.addEventListener("click", () => {
+navLi
+    menuToggle.classList.toggle("active");
+    navbar.classList.toggle("active");
+
+    const expanded = menuToggle.classList.contains("active");
+
+    menuToggle.setAttribute("aria-expanded", expanded);
+
+    document.body.classList.toggle("menu-open", expanded);
+
+});
 
     /* ======================================
        CERRAR MENÚ AL PASAR A DESKTOP

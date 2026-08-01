@@ -24,6 +24,11 @@ body {
     color: var(--text-main, #333);
     line-height: var(--lh-normal, 1.5);
     overflow-x: hidden;
+
+    /* Evita que el fondo haga scroll cuando el menú móvil está abierto */
+body.menu-open {
+    overflow: hidden;
+}
 }
 
 img {
@@ -341,7 +346,7 @@ section:not(.hero) {
 
     #navbar {
         position: absolute;
-        top: var(--header-height, 80px);
+        top: var(--header-height, 95px);
         left: 0;
         width: 100%;
         background: rgba(248, 248, 245, 0.98);
@@ -785,4 +790,170 @@ EXPLORACIONES
 
 .team-member + .team-member {
     margin-top: 35px;
+}
+
+/* Tablets */
+@media (max-width:992px){
+
+.about-grid{
+    grid-template-columns:1fr;
+    gap:3rem;
+}
+
+.cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.timeline{
+    flex-wrap:wrap;
+}
+
+.step{
+    flex:0 0 calc(50% - 1rem);
+}
+
+.exploration,
+.exploration.reverse{
+    grid-template-columns:1fr;
+    gap:2.5rem;
+}
+
+.exploration.reverse .exploration-image,
+.exploration.reverse .exploration-content{
+    order:unset;
+}
+
+}
+
+@media (max-width:768px){
+
+#header{
+    height:80px;
+}
+
+#header .container{
+    padding-top:0;
+}
+
+.logo img{
+    height:52px;
+}
+
+.hero{
+
+    min-height:auto;
+
+    padding-top:120px;
+    padding-bottom:80px;
+
+    align-items:center;
+}
+
+.hero-content{
+    text-align:center;
+}
+
+.hero-tag{
+
+    font-size:.72rem;
+}
+
+.hero h1{
+
+    font-size:2.4rem;
+    line-height:1.15;
+}
+
+.hero p{
+
+    font-size:1rem;
+    line-height:1.7;
+}
+
+.hero-buttons{
+
+    justify-content:center;
+}
+
+.btn{
+
+    width:100%;
+}
+
+.about-grid{
+
+    grid-template-columns:1fr;
+}
+
+.cards{
+
+    grid-template-columns:1fr;
+}
+
+.timeline{
+
+    flex-direction:column;
+}
+
+.step{
+
+    width:100%;
+}
+
+.exploration,
+.exploration.reverse{
+
+    grid-template-columns:1fr;
+}
+
+.exploration h3{
+
+    font-size:1.7rem;
+}
+
+.section-header{
+
+    margin-bottom:3rem;
+}
+
+section:not(.hero){
+
+    padding:4rem 0;
+}
+
+}
+
+@media (max-width:480px){
+
+.container{
+
+    width:92%;
+}
+
+.hero h1{
+
+    font-size:2rem;
+}
+
+.section-header h2{
+
+    font-size:1.8rem;
+}
+
+.card{
+
+    padding:2rem;
+}
+
+.exploration h3{
+
+    font-size:1.5rem;
+}
+
+.btn{
+
+    height:50px;
+    font-size:.95rem;
+}
+
 }
