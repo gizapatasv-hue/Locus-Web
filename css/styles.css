@@ -206,7 +206,7 @@ ul {
 
     padding-top: 95px;
 
-    background: url("../assets/background/hero.jpg") center/cover no-repeat;
+background: url("../assets/background/hero.jpg?v=2") center/cover no-repeat;
 }
 
 .hero-overlay {
